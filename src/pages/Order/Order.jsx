@@ -90,6 +90,39 @@ const OrdersPage = () => {
       createdAt: '2023-05-10',
     },
     {
+      id: 'ORD-20240001',
+      type: 'repair',
+      customer: '李四',
+      phone: '13800138000',
+      carModel: '宝马x7',
+      licensePlate: '粤B88888',
+      amount: 1200,
+      status: 'processing',
+      createdAt: '2023-05-10',
+    },
+    {
+      id: 'ORD-20230001',
+      type: 'repair',
+      customer: '王五',
+      phone: '13800138000',
+      carModel: '马自达昂克赛拉',
+      licensePlate: '粤A12345',
+      amount: 1200,
+      status: 'processing',
+      createdAt: '2023-05-10',
+    },
+    {
+      id: 'ORD-20230001',
+      type: 'repair',
+      customer: '赵七',
+      phone: '13800138000',
+      carModel: '迈巴赫',
+      licensePlate: '粤A88888',
+      amount: 1200,
+      status: 'processing',
+      createdAt: '2023-05-10',
+    },
+    {
       id: 'ORD-20230002',
       type: 'sale',
       customer: '李四',
@@ -276,7 +309,7 @@ const OrdersPage = () => {
             <Table sx={{ minWidth: 650 }} aria-label="工单表格">
               <TableHead>
                 <TableRow>
-                  <TableCell>工单编号</TableCell>
+                  {/* <TableCell>工单编号</TableCell> */}
                   <TableCell>工单类型</TableCell>
                   {!isMobile && <TableCell>客户姓名</TableCell>}
                   {!isMobile && <TableCell>联系电话</TableCell>}
@@ -289,7 +322,7 @@ const OrdersPage = () => {
               <TableBody>
                 {filteredOrders.map((order) => (
                   <TableRow key={order.id}>
-                    <TableCell>{order.id}</TableCell>
+                    {/* <TableCell>{order.id}</TableCell> */}
                     <TableCell>
                       <Chip 
                         label={orderTypes.find(t => t.value === order.type).label}
